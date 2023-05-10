@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from "./components/Home.vue";
 import List from "./components/List.vue";
 import Detail from "./components/Detail.vue";
+import Author from "./components/Author.vue";
+import Comment from "./components/Comment.vue";
 
 const routes = [
   {
@@ -15,6 +17,23 @@ const routes = [
   {
     path: "/detail/:id",
     component: Detail,
+
+    /* ## nasted routes
+    1. 페이지 안에서 또 라우터를 쪼개고 싶을 때 사용
+    /detail/0/author
+    /detail/0/commnet
+    - children 경로는 상대경로로 적어야함
+    */
+    children: [
+      {
+        path: "author",
+        component: Author,
+      },
+      {
+        path: "comment",
+        component: Comment,
+      },
+    ],
   },
 
   /*

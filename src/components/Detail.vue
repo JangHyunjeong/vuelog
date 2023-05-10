@@ -18,6 +18,10 @@
         <div class="mt-4">
           <p>{{ ListData[$route.params.id].content }}</p>
         </div>
+
+        <RouterView></RouterView>
+
+        <button @click="$router.push('/list')">목록으로 가기</button>
       </div>
     </div>
   </div>
