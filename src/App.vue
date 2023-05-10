@@ -62,12 +62,13 @@
     </nav>
     <!-- // navigation -->
 
-    <List :ListData="ListData" />
+    <RouterView :ListData="ListData"></RouterView>
+    <!-- <List :ListData="ListData" /> -->
   </div>
 </template>
 
 <script>
-import List from "./components/List";
+// import List from "./components/List";
 import ListData from "./assets/listData.js";
 
 export default {
@@ -78,7 +79,7 @@ export default {
     };
   },
   components: {
-    List,
+    //List,
   },
 };
 </script>
