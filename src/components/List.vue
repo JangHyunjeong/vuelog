@@ -1,5 +1,5 @@
 <template>
-  <div v-for="(item, idx) in ListData" :key="idx">
+  <div v-for="item in ListData" :key="item.number">
     <h5>
       <RouterLink to="/detail">{{ item.title }}</RouterLink>
     </h5>
