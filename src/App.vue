@@ -31,7 +31,9 @@
     </nav>
     <!-- // navigation -->
 
-    <RouterView :ListData="ListData"></RouterView>
+    <div class="mt-5">
+      <RouterView :ListData="ListData"></RouterView>
+    </div>
     <!-- <List :ListData="ListData" /> -->
   </div>
 </template>
